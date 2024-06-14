@@ -616,8 +616,8 @@ body{
 
 .banner__text h1{
   margin-bottom: 2.5rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 3rem;
+  line-height: 1;
   font-weight: 600;
 }
 
@@ -650,6 +650,24 @@ body{
   position: relative;
   bottom: 2.5rem;
   left: 2.5rem;
+}
+
+.welcome__text h2{
+  margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.welcome__text h4{
+  margin-bottom: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+.welcome__text P{
+  margin-bottom: 1.75rem;
 }
 
 *, ::before, ::after{
