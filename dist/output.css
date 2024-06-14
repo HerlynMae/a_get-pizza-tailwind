@@ -449,6 +449,7 @@ video {
 }
 
 body{
+  overflow-x: hidden;
   font-family: Poppins;
 }
 
@@ -464,6 +465,11 @@ body{
 /* header */
 
 .header{
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   --tw-shadow: 0 8px 24px -15px rgba(149,157,165,0.2);
@@ -483,7 +489,7 @@ body{
 
 .header__nav{
   position: fixed;
-  top: 6.5rem;
+  top: 6.2rem;
   right: -100%;
   display: flex;
   width: 10rem;
@@ -501,6 +507,8 @@ body{
 
 .header__nav.open{
   right: 0px;
+  z-index: 50;
+  overflow-y: hidden;
 }
 
 .header__nav li a{
@@ -510,6 +518,24 @@ body{
 .header__nav li a:hover{
   --tw-text-opacity: 1;
   color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+.header .transparent{
+  display: none;
+}
+
+.header .transparent.open{
+  position: fixed;
+  top: 6.2rem;
+  left: 0px;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  transition-duration: 700ms;
 }
 
 .header .toggle__menu{
@@ -576,13 +602,15 @@ body{
 /* banner */
 
 .banner{
-  padding-top: 2.5rem;
+  padding-top: 6rem;
   padding-bottom: 2.5rem;
 }
 
 .banner__wrapper{
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
   gap: 1.25rem;
 }
 
@@ -595,6 +623,33 @@ body{
 
 .banner__text span{
   font-weight: 800;
+}
+
+/* welcome to get pizza */
+
+.welcome{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.welcome__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__image img{
+  width: 18rem;
+  border-radius: 1.5rem;
+  border-width: 8px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.welcome__image img:last-child{
+  position: relative;
+  bottom: 2.5rem;
+  left: 2.5rem;
 }
 
 *, ::before, ::after{
@@ -763,7 +818,7 @@ body{
 }
 
 .btn.bg-primaryy:hover{
-  background-color: rgb(178 57 32 / 0.5);
+  background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }

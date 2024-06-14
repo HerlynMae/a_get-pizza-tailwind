@@ -3,8 +3,10 @@
 
 const headerNav = document.querySelector(".header__nav");
 const toggleMenu = document.querySelector(".toggle__menu");
+const transparent = document.querySelector(".transparent");
 
 toggleMenu.addEventListener("click", () => {
   headerNav.classList.toggle("open");
   toggleMenu.classList.toggle("open");
+  transparent.classList.toggle("open");
 });
