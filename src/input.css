@@ -96,7 +96,7 @@
   }
   /* what we offer */
   .offer {
-    @apply py-10 bg-primary/70;
+    @apply py-10 bg-slate-700 text-white;
   }
   .offer h2 {
     @apply text-3xl font-bold;
@@ -129,6 +129,9 @@
   .offer__foods-text h4 {
     @apply text-xl font-semibold;
   }
+  .connect {
+    @apply py-5;
+  }
 }
 
 @layer components {
@@ -137,5 +140,8 @@
   }
   .btn.bg-primaryy {
     @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-black;
+  }
+  .btn.bg-light-scdryy {
+    @apply bg-lightSecondary border border-lightSecondary text-black hover:bg-transparent hover:text-black;
   }
 }

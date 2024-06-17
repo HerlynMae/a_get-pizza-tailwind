@@ -673,9 +673,12 @@ body{
 /* what we offer */
 
 .offer{
-  background-color: rgb(178 57 32 / 0.7);
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .offer h2{
@@ -753,6 +756,11 @@ body{
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+}
+
+.connect{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 *, ::before, ::after{
@@ -926,6 +934,22 @@ body{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.btn.bg-light-scdryy{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(254 235 200 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 235 200 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.btn.bg-light-scdryy:hover{
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .mb-5{
   margin-bottom: 1.25rem;
 }
@@ -933,4 +957,8 @@ body{
 .bg-lightSecondary{
   --tw-bg-opacity: 1;
   background-color: rgb(254 235 200 / var(--tw-bg-opacity));
+}
+
+.bg-primary\/70{
+  background-color: rgb(178 57 32 / 0.7);
 }
