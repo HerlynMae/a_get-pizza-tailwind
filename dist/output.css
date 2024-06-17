@@ -670,6 +670,91 @@ body{
   margin-bottom: 1.75rem;
 }
 
+/* what we offer */
+
+.offer{
+  background-color: rgb(178 57 32 / 0.7);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.offer h2{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.offer__tab{
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.offer__tab img{
+  width: 5rem;
+}
+
+.offer__tab img.active{
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(247 183 84 / var(--tw-border-opacity));
+  padding: 0.25rem;
+}
+
+.offer__details--wrap{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.offer__details{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .offer__details{
+    display: none;
+  }
+}
+
+.offer__details.active{
+  display: block;
+}
+
+@media (min-width: 1024px){
+  .offer__details.active{
+    display: block;
+  }
+}
+
+.offer__foods{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.offer__foods img{
+  width: 8rem;
+}
+
+.offer__foods-text h4{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -839,6 +924,10 @@ body{
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .bg-lightSecondary{

@@ -94,6 +94,41 @@
   .welcome__text P {
     @apply mb-7;
   }
+  /* what we offer */
+  .offer {
+    @apply py-10 bg-primary/70;
+  }
+  .offer h2 {
+    @apply text-3xl font-bold;
+  }
+  .offer__tab {
+    @apply flex justify-center gap-5 py-10;
+  }
+  .offer__tab img {
+    @apply w-20;
+  }
+  .offer__tab img.active {
+    @apply border-2 p-1 border-secondary rounded-full;
+  }
+  .offer__details--wrap {
+    @apply grid grid-cols-2 gap-3;
+  }
+  .offer__details {
+    @apply hidden lg:hidden;
+  }
+  .offer__details.active {
+    @apply block lg:block;
+  }
+  .offer__foods {
+    @apply flex flex-col gap-4 justify-center items-center
+    text-center py-10 border border-white rounded-xl;
+  }
+  .offer__foods img {
+    @apply w-32;
+  }
+  .offer__foods-text h4 {
+    @apply text-xl font-semibold;
+  }
 }
 
 @layer components {
