@@ -457,7 +457,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1600px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -503,6 +503,16 @@ body{
   text-align: center;
   font-weight: 600;
   transition-duration: 700ms;
+}
+
+@media (min-width: 1024px){
+  .header__nav{
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    background-color: transparent;
+  }
 }
 
 .header__nav.open{
@@ -606,12 +616,27 @@ body{
   padding-bottom: 2.5rem;
 }
 
+@media (min-width: 1024px){
+  .banner{
+    padding-bottom: 0px;
+  }
+}
+
 .banner__wrapper{
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+}
+
+@media (min-width: 1024px){
+  .banner__wrapper{
+    max-width: 60rem;
+    flex-direction: row;
+  }
 }
 
 .banner__text h1{
@@ -633,9 +658,20 @@ body{
 }
 
 .welcome__wrapper{
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px){
+  .welcome__wrapper{
+    max-width: 60rem;
+    flex-direction: row;
+    gap: 8rem;
+  }
 }
 
 .welcome__image img{
@@ -644,6 +680,12 @@ body{
   border-width: 8px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+@media (min-width: 1024px){
+  .welcome__image img{
+    width: 100%;
+  }
 }
 
 .welcome__image img:last-child{
@@ -674,7 +716,7 @@ body{
 
 .offer{
   --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   --tw-text-opacity: 1;
@@ -682,6 +724,7 @@ body{
 }
 
 .offer h2{
+  text-align: center;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -719,7 +762,10 @@ body{
 
 @media (min-width: 1024px){
   .offer__details{
+    margin-left: auto;
+    margin-right: auto;
     display: none;
+    max-width: 50rem;
   }
 }
 
@@ -761,6 +807,100 @@ body{
 .connect{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px){
+  .connect{
+    padding-top: 1.25rem;
+    padding-bottom: 0px;
+  }
+}
+
+.connect__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px){
+  .connect__wrapper{
+    flex-direction: row;
+  }
+}
+
+.connect__wrapper img{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .connect__wrapper img{
+    display: block;
+    width: 24rem;
+  }
+}
+
+.connect__details h3{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.connect__input{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+}
+
+.connect__input input{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.footer__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px){
+  .footer__wrapper{
+    gap: 2.5rem;
+  }
+}
+
+.footer__details{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px){
+  .footer__details{
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+
+.footer__details h3{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.footer__wrapper h4{
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
 }
 
 *, ::before, ::after{
@@ -929,6 +1069,22 @@ body{
 }
 
 .btn.bg-primaryy:hover{
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.btn.bg-scdryy{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(247 183 84 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 183 84 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn.bg-scdryy:hover{
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
