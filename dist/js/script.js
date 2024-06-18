@@ -41,3 +41,41 @@ function removeActiveContent() {
     content.classList.remove("active");
   });
 }
+
+// accordion
+
+//we will select all the h4 in dropdown__item
+const dropdowns = document.querySelectorAll("h4");
+// const icon = document.querySelector("i");
+
+// forEach in JS is looping which means we will iterate the array
+// or it will perform repeatedly since we have 3 accordion
+// loop used to repeat a set of instructions
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener("click", () => {
+    dropdown.nextElementSibling.classList.toggle("open");
+    //we will select each icon so that we can rotate the icon once we click the question
+    dropdown.querySelector("i").classList.toggle("open");
+    // icon.classList.toggle("open");
+  });
+});
+
+// slider
+var slider = tns({
+  container: ".feedback__slider",
+  items: 3,
+  gutter: 100,
+  slideBy: "page",
+  autoplay: true,
+  controls: false,
+  nav: false,
+  autoplayButtonOutput: false,
+  responsive: {
+    1250: {
+      items: 3,
+    },
+    200: {
+      items: 1,
+    },
+  },
+});

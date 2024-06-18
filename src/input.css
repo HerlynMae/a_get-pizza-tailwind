@@ -7,9 +7,181 @@
   body {
     @apply font-poppins overflow-x-hidden;
   }
+
   .container {
     @apply max-w-[1600px] w-full px-4 mx-auto;
   }
+
+  /* banner */
+  .banner {
+    @apply pt-24 pb-10 lg:pb-0;
+  }
+  .banner__wrapper {
+    @apply flex flex-col-reverse gap-5 items-center justify-center
+    lg:flex-row  lg:max-w-[60rem] mx-auto;
+  }
+  .banner__text h1 {
+    @apply text-5xl font-semibold mb-10;
+  }
+  .banner__text span {
+    @apply font-extrabold;
+  }
+  /* welcome to get pizza */
+  .welcome {
+    @apply py-10;
+  }
+  .welcome__wrapper {
+    @apply flex flex-col items-center justify-center 
+    /* desktop */
+    lg:flex-row lg:gap-32 lg:max-w-[60rem] mx-auto;
+  }
+
+  .welcome__image img {
+    @apply w-72 border-8 border-black rounded-3xl
+    /* desktop */
+    lg:w-full;
+  }
+  .welcome__image img:last-child {
+    @apply relative bottom-10 left-10;
+  }
+  .welcome__text h2 {
+    @apply text-3xl font-bold mb-5;
+  }
+  .welcome__text h4 {
+    @apply text-primary font-semibold mb-4;
+  }
+  .welcome__text P {
+    @apply mb-7;
+  }
+  /* what we offer */
+  .offer {
+    @apply py-10 bg-tertiary text-white;
+  }
+  .offer h2 {
+    @apply text-3xl font-bold text-center;
+  }
+  .offer__tab {
+    @apply flex justify-center gap-5 py-10;
+  }
+  .offer__tab img {
+    @apply w-20;
+  }
+  .offer__tab img.active {
+    @apply border-2 p-1 border-secondary rounded-full;
+  }
+  .offer__details--wrap {
+    @apply grid grid-cols-2 gap-3;
+  }
+  .offer__details {
+    @apply hidden lg:hidden lg:max-w-[50rem] lg:mx-auto;
+  }
+  .offer__details.active {
+    @apply block lg:block;
+  }
+  .offer__foods {
+    @apply flex flex-col gap-4 justify-center items-center
+    text-center py-10 border border-white rounded-xl;
+  }
+  .offer__foods img {
+    @apply w-32;
+  }
+  .offer__foods-text h4 {
+    @apply text-xl font-semibold;
+  }
+
+  /* about */
+  .about {
+    @apply pt-32 pb-10;
+  }
+  .about__wrapper {
+    @apply flex flex-col items-center justify-between;
+  }
+  .about__video {
+    @apply mb-10;
+  }
+  .about__text h1 {
+    @apply font-bold text-5xl mb-5;
+  }
+  /* our story */
+  .story {
+    @apply py-10;
+  }
+  .story h3 {
+    @apply font-bold mb-10 text-4xl text-center;
+  }
+  .story__wrapper {
+    @apply lg:grid lg:grid-cols-3 items-center justify-center;
+  }
+  .story__wrapper img {
+    @apply hidden;
+  }
+  .story__content {
+    @apply text-justify;
+  }
+  .story__item {
+    @apply mb-5;
+  }
+  .story__item h4,
+  .story__item i {
+    @apply bg-primary text-white px-3 py-2 font-bold 
+    duration-500 flex justify-between items-center cursor-pointer;
+  }
+  .story__item i.open {
+    @apply rotate-[900deg] duration-500;
+  }
+  .story__item p {
+    @apply bg-slate-50 h-auto max-h-0 overflow-hidden 
+    ease-in-out duration-300 text-justify;
+  }
+  .story__item p.open {
+    @apply max-h-[50rem] bg-slate-50 text-justify duration-700 p-3;
+  }
+  /* feedback */
+  .feedback {
+    @apply py-10;
+  }
+  .feedback h3 {
+    @apply font-bold text-3xl text-center mb-5;
+  }
+  .feedback__wrapper {
+    @apply max-w-[40rem] mx-auto flex flex-col;
+  }
+  .feedback__clients {
+    @apply text-center;
+  }
+  .feedback__clients img {
+    @apply w-[5rem] rounded-full mx-auto;
+  }
+  .feedback__clients p {
+    @apply my-5;
+  }
+  .tns-outer {
+    @apply overflow-hidden max-w-[40rem] mx-auto;
+  }
+  .tns-outer button {
+    @apply hidden;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 bg-transparent border-transparent rounded-xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
+  }
+  .btn.bg-primaryy {
+    @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-black;
+  }
+  .btn.bg-primary-reverse {
+    @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-white;
+  }
+  .btn.bg-scdryy {
+    @apply bg-secondary border border-secondary text-white hover:bg-transparent hover:text-black;
+  }
+  .btn.bg-light-scdryy {
+    @apply bg-lightSecondary border border-lightSecondary text-black hover:bg-transparent hover:text-black;
+  }
+}
+
+@layer utilities {
   /* header */
   .header {
     @apply py-5 shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)] fixed w-full z-50 bg-white;
@@ -61,82 +233,7 @@
     @apply content-["*"] bg-primary w-10 h-1 
     rounded-lg ease-in-out duration-700;
   }
-  /* banner */
-  .banner {
-    @apply pt-24 pb-10 lg:pb-0;
-  }
-  .banner__wrapper {
-    @apply flex flex-col-reverse gap-5 items-center justify-center
-    lg:flex-row  lg:max-w-[60rem] mx-auto;
-  }
-  .banner__text h1 {
-    @apply text-5xl font-semibold mb-10;
-  }
-  .banner__text span {
-    @apply font-extrabold;
-  }
-  /* welcome to get pizza */
-  .welcome {
-    @apply py-10;
-  }
-  .welcome__wrapper {
-    @apply flex flex-col items-center justify-center 
-    /* desktop */
-    lg:flex-row lg:gap-32 lg:max-w-[60rem] mx-auto;
-  }
-
-  .welcome__image img {
-    @apply w-72 border-8 border-black rounded-3xl
-    /* desktop */
-    lg:w-full;
-  }
-  .welcome__image img:last-child {
-    @apply relative bottom-10 left-10;
-  }
-  .welcome__text h2 {
-    @apply text-3xl font-bold mb-5;
-  }
-  .welcome__text h4 {
-    @apply text-primary font-semibold mb-4;
-  }
-  .welcome__text P {
-    @apply mb-7;
-  }
-  /* what we offer */
-  .offer {
-    @apply py-10 bg-slate-500 text-white;
-  }
-  .offer h2 {
-    @apply text-3xl font-bold text-center;
-  }
-  .offer__tab {
-    @apply flex justify-center gap-5 py-10;
-  }
-  .offer__tab img {
-    @apply w-20;
-  }
-  .offer__tab img.active {
-    @apply border-2 p-1 border-secondary rounded-full;
-  }
-  .offer__details--wrap {
-    @apply grid grid-cols-2 gap-3;
-  }
-  .offer__details {
-    @apply hidden lg:hidden lg:max-w-[50rem] lg:mx-auto;
-  }
-  .offer__details.active {
-    @apply block lg:block;
-  }
-  .offer__foods {
-    @apply flex flex-col gap-4 justify-center items-center
-    text-center py-10 border border-white rounded-xl;
-  }
-  .offer__foods img {
-    @apply w-32;
-  }
-  .offer__foods-text h4 {
-    @apply text-xl font-semibold;
-  }
+  /* connect */
   .connect {
     @apply py-5 lg:pt-5 lg:pb-0;
   }
@@ -157,8 +254,9 @@
     @apply bg-white p-3;
   }
   .connect__input input {
-    @apply px-3 py-2;
+    @apply px-3 py-2 border-transparent enabled:text-black;
   }
+  /* footer */
   .footer {
     @apply py-7;
   }
@@ -167,31 +265,19 @@
     /* desktop */
     lg:gap-10;
   }
-
+  .footer__wrapper img {
+    @apply mb-6;
+  }
   .footer__details {
-    @apply flex flex-col gap-5
+    @apply flex flex-col gap-5 mb-5
       /* desktop */
     lg:flex-row lg:gap-20;
   }
   .footer__details h3 {
     @apply font-bold text-xl;
   }
+
   .footer__wrapper h4 {
     @apply text-primary;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply py-2 px-4 bg-transparent border-transparent rounded-xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
-  }
-  .btn.bg-primaryy {
-    @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-black;
-  }
-  .btn.bg-scdryy {
-    @apply bg-secondary border border-secondary text-white hover:bg-transparent hover:text-black;
-  }
-  .btn.bg-light-scdryy {
-    @apply bg-lightSecondary border border-lightSecondary text-black hover:bg-transparent hover:text-black;
   }
 }
