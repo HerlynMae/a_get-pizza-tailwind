@@ -1044,9 +1044,19 @@ body{
   background-color: rgb(178 57 32 / 0.7);
 }
 
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(178 57 32 / var(--tw-bg-opacity));
+}
+
 .text-secondary{
   --tw-text-opacity: 1;
   color: rgb(247 183 84 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* header */
