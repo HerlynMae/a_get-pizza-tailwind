@@ -94,14 +94,26 @@
     @apply pt-32 pb-10;
   }
   .about__wrapper {
-    @apply flex flex-col items-center justify-between;
+    @apply flex flex-col items-center justify-between
+    /* desktop */
+    lg:flex-row;
   }
   .about__video {
     @apply mb-10;
   }
-  .about__text h1 {
-    @apply font-bold text-5xl mb-5;
+  .about__video iframe {
+    @apply w-96 h-72
+    /* desktop */
+    lg:w-[50rem] lg:h-[30rem];
   }
+
+  .about__text h1 {
+    @apply font-bold text-5xl mb-5 text-primary;
+  }
+  .about__text p {
+    @apply lg:max-w-[40rem];
+  }
+
   /* our story */
   .story {
     @apply py-10;
@@ -110,16 +122,17 @@
     @apply font-bold mb-10 text-4xl text-center;
   }
   .story__wrapper {
-    @apply lg:grid lg:grid-cols-3 items-center justify-center;
+    @apply lg:grid lg:grid-cols-2 lg:gap-10
+     lg:items-center lg:justify-center;
   }
   .story__wrapper img {
-    @apply hidden;
+    @apply hidden rounded-3xl lg:block lg:h-[30rem];
   }
   .story__content {
     @apply text-justify;
   }
   .story__item {
-    @apply mb-5;
+    @apply mb-5 max-w-[35rem] mx-auto;
   }
   .story__item h4,
   .story__item i {
@@ -160,6 +173,47 @@
   }
   .tns-outer button {
     @apply hidden;
+  }
+
+  /* menu for food*/
+  .menu {
+    @apply pt-32 pb-10 bg-tertiary;
+  }
+  .menu__link {
+    @apply flex gap-5 justify-center bg-secondary p-5 rounded-3xl mb-10;
+  }
+  .menu__tab {
+    @apply text-tertiary font-bold border-r pr-4;
+  }
+  .menu__tab:last-child {
+    @apply border-none;
+  }
+  .menu__foods {
+    @apply text-center py-5  rounded-xl text-white;
+  }
+  .menu__foods img {
+    @apply w-32 mb-5;
+  }
+  .menu__foods-text h4 {
+    @apply text-xl font-semibold;
+  }
+  .menu__foods {
+    @apply text-center;
+  }
+  .menu__foods img {
+    @apply mx-auto;
+  }
+  .menu__tab.active {
+    @apply text-primary;
+  }
+  .menu__item--wrap {
+    @apply flex flex-wrap gap-5 justify-center;
+  }
+  .menu__item {
+    @apply hidden lg:hidden;
+  }
+  .menu__item.active {
+    @apply block lg:block;
   }
 }
 
@@ -278,6 +332,26 @@
   }
 
   .footer__wrapper h4 {
+    @apply text-primary;
+  }
+  .cart__view {
+    @apply hidden z-50 fixed top-[6.3rem] right-0 w-[15rem]
+    min-h-[20rem] bg-white p-3;
+  }
+  .cart__view.show {
+    @apply block;
+  }
+  .cart__item {
+    @apply flex items-center relative;
+  }
+  .cart__item img {
+    @apply w-20 h-20 mr-4;
+  }
+  .cart__info {
+    @apply flex justify-center gap-2;
+  }
+
+  .cart__info span {
     @apply text-primary;
   }
 }

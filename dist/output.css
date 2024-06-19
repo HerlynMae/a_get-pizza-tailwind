@@ -671,8 +671,26 @@ body{
   justify-content: space-between;
 }
 
+@media (min-width: 1024px){
+  .about__wrapper{
+    flex-direction: row;
+  }
+}
+
 .about__video{
   margin-bottom: 2.5rem;
+}
+
+.about__video iframe{
+  height: 18rem;
+  width: 24rem;
+}
+
+@media (min-width: 1024px){
+  .about__video iframe{
+    height: 30rem;
+    width: 50rem;
+  }
 }
 
 .about__text h1{
@@ -680,6 +698,14 @@ body{
   font-size: 3rem;
   line-height: 1;
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .about__text p{
+    max-width: 40rem;
+  }
 }
 
 /* our story */
@@ -697,20 +723,26 @@ body{
   font-weight: 700;
 }
 
-.story__wrapper{
-  align-items: center;
-  justify-content: center;
-}
-
 @media (min-width: 1024px){
   .story__wrapper{
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
   }
 }
 
 .story__wrapper img{
   display: none;
+  border-radius: 1.5rem;
+}
+
+@media (min-width: 1024px){
+  .story__wrapper img{
+    display: block;
+    height: 30rem;
+  }
 }
 
 .story__content{
@@ -718,7 +750,10 @@ body{
 }
 
 .story__item{
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.25rem;
+  max-width: 35rem;
 }
 
 .story__item h4,
@@ -802,6 +837,99 @@ body{
 .feedback__clients p{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+/* menu for food*/
+
+.menu{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 60 95 / var(--tw-bg-opacity));
+  padding-top: 8rem;
+  padding-bottom: 2.5rem;
+}
+
+.menu__link{
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 183 84 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+}
+
+.menu__tab{
+  border-right-width: 1px;
+  padding-right: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(34 60 95 / var(--tw-text-opacity));
+}
+
+.menu__tab:last-child{
+  border-style: none;
+}
+
+.menu__foods{
+  border-radius: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.menu__foods img{
+  margin-bottom: 1.25rem;
+  width: 8rem;
+}
+
+.menu__foods-text h4{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.menu__foods{
+  text-align: center;
+}
+
+.menu__foods img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu__tab.active{
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+.menu__item--wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.menu__item{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .menu__item{
+    display: none;
+  }
+}
+
+.menu__item.active{
+  display: block;
+}
+
+@media (min-width: 1024px){
+  .menu__item.active{
+    display: block;
+  }
 }
 
 *, ::before, ::after{
@@ -1027,21 +1155,29 @@ body{
   margin-bottom: 1.25rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
+}
+
+.items-center{
+  align-items: center;
 }
 
 .justify-center{
   justify-content: center;
 }
 
+.gap-3{
+  gap: 0.75rem;
+}
+
 .bg-lightSecondary{
   --tw-bg-opacity: 1;
   background-color: rgb(254 235 200 / var(--tw-bg-opacity));
-}
-
-.bg-primary\/70{
-  background-color: rgb(178 57 32 / 0.7);
 }
 
 .bg-primary{
@@ -1316,6 +1452,46 @@ body{
 }
 
 .footer__wrapper h4{
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+.cart__view{
+  position: fixed;
+  top: 6.3rem;
+  right: 0px;
+  z-index: 50;
+  display: none;
+  min-height: 20rem;
+  width: 15rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+}
+
+.cart__view.show{
+  display: block;
+}
+
+.cart__item{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart__item img{
+  margin-right: 1rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+.cart__info{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cart__info span{
   --tw-text-opacity: 1;
   color: rgb(178 57 32 / var(--tw-text-opacity));
 }

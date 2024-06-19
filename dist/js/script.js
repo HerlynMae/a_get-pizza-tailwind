@@ -1,18 +1,3 @@
-// toggle menu
-
-//we will select the header nav and toggle menu
-// const variable cannot be changed once it has been declared.
-
-const headerNav = document.querySelector(".header__nav");
-const toggleMenu = document.querySelector(".toggle__menu");
-const backDrop = document.querySelector(".transparent");
-
-toggleMenu.addEventListener("click", () => {
-  headerNav.classList.toggle("open");
-  toggleMenu.classList.toggle("open");
-  backDrop.classList.toggle("open");
-});
-
 // tabs
 const tabs = document.querySelectorAll(".offer__img");
 const contents = document.querySelectorAll(".offer__details");
@@ -60,22 +45,14 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-// slider
+// slider for feedback and menu
 var slider = tns({
   container: ".feedback__slider",
-  items: 3,
+  items: 1,
   gutter: 100,
   slideBy: "page",
   autoplay: true,
   controls: false,
   nav: false,
   autoplayButtonOutput: false,
-  responsive: {
-    1250: {
-      items: 3,
-    },
-    200: {
-      items: 1,
-    },
-  },
 });
