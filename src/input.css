@@ -183,7 +183,7 @@
     @apply flex gap-5 justify-center bg-secondary p-5 rounded-3xl mb-10;
   }
   .menu__tab {
-    @apply text-tertiary font-bold border-r pr-4;
+    @apply text-tertiary font-bold border-r pr-3;
   }
   .menu__tab:last-child {
     @apply border-none;
@@ -227,11 +227,8 @@
   .btn.bg-primary-reverse {
     @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-white;
   }
-  .btn.bg-scdryy {
-    @apply bg-secondary border border-secondary text-white hover:bg-transparent hover:text-black;
-  }
-  .btn.bg-light-scdryy {
-    @apply bg-lightSecondary border border-lightSecondary text-black hover:bg-transparent hover:text-black;
+  .btn.readmore {
+    @apply border border-primary  hover:text-primary hover:bg-white;
   }
 }
 

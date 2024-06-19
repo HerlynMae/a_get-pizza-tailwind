@@ -861,7 +861,7 @@ body{
 
 .menu__tab{
   border-right-width: 1px;
-  padding-right: 1rem;
+  padding-right: 0.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(34 60 95 / var(--tw-text-opacity));
@@ -1119,60 +1119,29 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.btn.bg-scdryy{
+.btn.readmore{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(247 183 84 / var(--tw-border-opacity));
+  border-color: rgb(178 57 32 / var(--tw-border-opacity));
+}
+
+.btn.readmore:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(247 183 84 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.btn.bg-scdryy:hover{
-  background-color: transparent;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.btn.bg-light-scdryy{
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(254 235 200 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 235 200 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.btn.bg-light-scdryy:hover{
-  background-color: transparent;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(178 57 32 / var(--tw-text-opacity));
 }
 
 .mb-5{
   margin-bottom: 1.25rem;
 }
 
-.block{
-  display: block;
-}
-
 .flex{
   display: flex;
 }
 
-.items-center{
-  align-items: center;
-}
-
 .justify-center{
   justify-content: center;
-}
-
-.gap-3{
-  gap: 0.75rem;
 }
 
 .bg-lightSecondary{
@@ -1452,46 +1421,6 @@ body{
 }
 
 .footer__wrapper h4{
-  --tw-text-opacity: 1;
-  color: rgb(178 57 32 / var(--tw-text-opacity));
-}
-
-.cart__view{
-  position: fixed;
-  top: 6.3rem;
-  right: 0px;
-  z-index: 50;
-  display: none;
-  min-height: 20rem;
-  width: 15rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 0.75rem;
-}
-
-.cart__view.show{
-  display: block;
-}
-
-.cart__item{
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.cart__item img{
-  margin-right: 1rem;
-  height: 5rem;
-  width: 5rem;
-}
-
-.cart__info{
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.cart__info span{
   --tw-text-opacity: 1;
   color: rgb(178 57 32 / var(--tw-text-opacity));
 }
