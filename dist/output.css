@@ -839,13 +839,63 @@ body{
   margin-bottom: 1.25rem;
 }
 
+/* menu banner */
+
+.menuBanner__wrapper{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image:  linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.6)),  url('../IMG/menubanner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 8rem;
+}
+
+.menuBanner__text{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 24rem;
+}
+
+@media (min-width: 1024px){
+  .menuBanner__text{
+    max-width: 50rem;
+    text-align: center;
+  }
+}
+
+.menuBanner__text h1{
+  margin-bottom: 1.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .menuBanner__text h1{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
 /* menu for food*/
 
 .menu{
   --tw-bg-opacity: 1;
   background-color: rgb(34 60 95 / var(--tw-bg-opacity));
-  padding-top: 8rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.menu__wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
 }
 
 .menu__link{
@@ -867,6 +917,13 @@ body{
   color: rgb(34 60 95 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px){
+  .menu__tab{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
 .menu__tab:last-child{
   border-style: none;
 }
@@ -878,6 +935,14 @@ body{
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .menu__foods{
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
 }
 
 .menu__foods img{
@@ -906,8 +971,8 @@ body{
 }
 
 .menu__item--wrap{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
   gap: 1.25rem;
 }
@@ -930,6 +995,90 @@ body{
   .menu__item.active{
     display: block;
   }
+}
+
+/* map */
+
+.map{
+  padding-top: 8rem;
+  padding-bottom: 2.5rem;
+}
+
+.map__wrapper{
+  display: grid;
+  place-content: center;
+}
+
+.map__wrapper iframe{
+  width: 27rem;
+}
+
+@media (min-width: 1024px){
+  .map__wrapper iframe{
+    width: 70rem;
+  }
+}
+
+/* form */
+
+.form{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 183 84 / var(--tw-bg-opacity));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.form h1{
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.form__wrapper{
+  display: grid;
+  justify-items: center;
+}
+
+.form__wrapper form{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+.form__wrapper ul{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form__wrapper form ul li input{
+  width: 100%;
+}
+
+.form__wrapper input,
+  textarea{
+  margin-bottom: 0.75rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.form__wrapper input:focus,
+  textarea:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.form__wrapper textarea{
+  height: 8rem;
 }
 
 *, ::before, ::after{
@@ -1119,6 +1268,22 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.btn.bg-scdryy{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(247 183 84 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 183 84 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn.bg-scdryy:hover{
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .btn.readmore{
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1142,6 +1307,10 @@ body{
 
 .justify-center{
   justify-content: center;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .bg-lightSecondary{
@@ -1314,8 +1483,8 @@ body{
 /* connect */
 
 .connect{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 1024px){
@@ -1363,16 +1532,17 @@ body{
 }
 
 .connect__input input{
-  border-color: transparent;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.connect__input input:enabled{
+.connect__input input:focus{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 /* footer */

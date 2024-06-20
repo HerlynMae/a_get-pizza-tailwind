@@ -174,22 +174,36 @@
   .tns-outer button {
     @apply hidden;
   }
+  /* menu banner */
+  .menuBanner__wrapper {
+    @apply flex flex-col items-center justify-center
+     p-32 bg-menu bg-cover bg-no-repeat h-screen w-full;
+  }
 
+  .menuBanner__text {
+    @apply max-w-96 mx-auto lg:text-center lg:max-w-[50rem];
+  }
+  .menuBanner__text h1 {
+    @apply text-white mb-6 font-bold text-3xl lg:text-6xl;
+  }
   /* menu for food*/
   .menu {
-    @apply pt-32 pb-10 bg-tertiary;
+    @apply py-16 bg-tertiary;
+  }
+  .menu__wrapper {
+    @apply max-w-[50rem] mx-auto;
   }
   .menu__link {
     @apply flex gap-5 justify-center bg-secondary p-5 rounded-3xl mb-10;
   }
   .menu__tab {
-    @apply text-tertiary font-bold border-r pr-3;
+    @apply text-tertiary font-bold border-r pr-3 lg:px-10;
   }
   .menu__tab:last-child {
     @apply border-none;
   }
   .menu__foods {
-    @apply text-center py-5  rounded-xl text-white;
+    @apply text-center py-5  rounded-xl text-white lg:border lg:border-white;
   }
   .menu__foods img {
     @apply w-32 mb-5;
@@ -207,13 +221,51 @@
     @apply text-primary;
   }
   .menu__item--wrap {
-    @apply flex flex-wrap gap-5 justify-center;
+    @apply grid grid-cols-3 gap-5 justify-center;
   }
   .menu__item {
     @apply hidden lg:hidden;
   }
   .menu__item.active {
     @apply block lg:block;
+  }
+
+  /* map */
+  .map {
+    @apply pt-32 pb-10;
+  }
+  .map__wrapper {
+    @apply grid place-content-center;
+  }
+  .map__wrapper iframe {
+    @apply w-[27rem]   lg:w-[70rem];
+  }
+  /* form */
+  .form {
+    @apply py-16 bg-secondary;
+  }
+  .form h1 {
+    @apply font-bold text-center text-white mb-10 text-5xl;
+  }
+  .form__wrapper {
+    @apply grid justify-items-center;
+  }
+  .form__wrapper form {
+    @apply max-w-[60rem] mx-auto;
+  }
+  .form__wrapper ul {
+    @apply grid grid-cols-2 gap-5 w-full;
+  }
+  .form__wrapper form ul li input {
+    @apply w-full;
+  }
+  .form__wrapper input,
+  textarea {
+    @apply w-full px-3 py-2  rounded-lg mb-3 focus:outline-none;
+  }
+
+  .form__wrapper textarea {
+    @apply h-32;
   }
 }
 
@@ -226,6 +278,9 @@
   }
   .btn.bg-primary-reverse {
     @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-white;
+  }
+  .btn.bg-scdryy {
+    @apply bg-secondary border border-secondary text-white hover:bg-transparent hover:text-black;
   }
   .btn.readmore {
     @apply border border-primary  hover:text-primary hover:bg-white;
@@ -286,7 +341,7 @@
   }
   /* connect */
   .connect {
-    @apply py-5 lg:pt-5 lg:pb-0;
+    @apply py-10 lg:pt-5 lg:pb-0;
   }
   .connect__wrapper {
     @apply flex flex-col items-center justify-center text-center
@@ -305,7 +360,7 @@
     @apply bg-white p-3;
   }
   .connect__input input {
-    @apply px-3 py-2 border-transparent enabled:text-black;
+    @apply px-3 py-2 focus:text-black focus:outline-none;
   }
   /* footer */
   .footer {
