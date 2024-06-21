@@ -342,7 +342,7 @@
   }
   /* announcement */
   .announce {
-    @apply fixed w-full z-10 bg-slate-100 pt-28 pb-1 
+    @apply fixed w-full z-10 bg-white pt-28 pb-1 
      text-center font-semibold text-primary leading-3 lg:leading-5;
   }
   /* connect */
