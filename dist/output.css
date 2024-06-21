@@ -465,12 +465,13 @@ body{
 /* banner */
 
 .banner{
-  padding-top: 6rem;
+  padding-top: 8rem;
   padding-bottom: 2.5rem;
 }
 
 @media (min-width: 1024px){
   .banner{
+    padding-top: 8rem;
     padding-bottom: 0px;
   }
 }
@@ -660,7 +661,7 @@ body{
 /* about */
 
 .about{
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 2.5rem;
 }
 
@@ -1000,7 +1001,7 @@ body{
 /* map */
 
 .map{
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 2.5rem;
 }
 
@@ -1478,6 +1479,29 @@ body{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --tw-content: "*";
   content: var(--tw-content);
+}
+
+/* announcement */
+
+.announce{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  padding-top: 7rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: .75rem;
+  --tw-text-opacity: 1;
+  color: rgb(178 57 32 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .announce{
+    line-height: 1.25rem;
+  }
 }
 
 /* connect */
