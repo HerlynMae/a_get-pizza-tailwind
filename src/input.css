@@ -263,9 +263,34 @@
   textarea {
     @apply w-full px-3 py-2  rounded-lg mb-3 focus:outline-none;
   }
-
   .form__wrapper textarea {
     @apply h-32;
+  }
+
+  /* single Page for menu */
+  .singlePage {
+    @apply pt-40 pb-10;
+  }
+  .singlePage__wrapper {
+    @apply flex flex-col items-center;
+  }
+  .singlePage__wrapper img {
+    @apply mb-10 rounded-xl h-[30rem];
+  }
+  .singlePage__content {
+    @apply flex flex-col justify-between  gap-32 
+    bg-secondary/30 py-6 px-10
+  /* desktop */
+  lg:flex-row;
+  }
+  .singlePage__details:last-child {
+    @apply max-w-[20rem];
+  }
+  .singlePage__details h2 {
+    @apply font-bold mb-5 text-2xl;
+  }
+  .singlePage__details ul li {
+    @apply list-disc mb-3;
   }
 }
 
